@@ -19,6 +19,12 @@ The dumps will be updated continuously. If you use our repository, please cite t
 
 ## Files
 This repository contains two dumps:
+CORD19 - Version 22:
+- [Entity Mentions in titles and abstracts (V22)](https://1drv.ms/u/s!ArDgbq3ak3Zuh5swZCUL9wNeG7G8tw?e=a4cKch) contains entity mentions within documents' titles and abstracts only
+- [Entity Mentions in full texts (V22)](https://1drv.ms/u/s!ArDgbq3ak3Zuh5syeLZamNRzORn6JA?e=LODHmi) contains all entity mentions within the titles, abstracts and document body texts
+- [Metadata.csv (V22)](https://1drv.ms/u/s!ArDgbq3ak3Zuh5sx0LqCE9lqX7rtfg?e=RjdKWN) contains metadata of all files. This file is included in the original CORD19 dump. The SHA column contains the SHAs of the pdf scans which we use as the identifier for the files. These SHAs are also the original file names of the JSON parses.
+
+CORD19 - Version 9:
 - [Entity Mentions in titles and abstracts (V9)](https://1drv.ms/u/s!ArDgbq3ak3Zuh5oeo_b_Qo50j9QmeA?e=qclJQ4) contains entity mentions within documents' titles and abstracts only
 - [Entity Mentions in full texts (V9)](https://1drv.ms/u/s!ArDgbq3ak3Zuh5ofm6bOXIOvEcqu6w?e=BggneA) contains all entity mentions within the titles, abstracts and document body texts
 - [Metadata.csv (V9)](https://1drv.ms/u/s!ArDgbq3ak3Zuh5ogtS6q2sUITSRHpA?e=fuoIIz) contains metadata of all files. This file is included in the original CORD19 dump. The SHA column contains the SHAs of the pdf scans which we use as the identifier for the files. These SHAs are also the original file names of the JSON parses.
