@@ -19,6 +19,11 @@ The dumps will be updated continuously. If you use our repository, please cite t
 
 ## Files
 This repository contains two dumps:
+CORD19 - Version 30:
+- [Entity Mentions in titles and abstracts (V30)](https://1drv.ms/u/s!ArDgbq3ak3Zuh5t0gMLGB-B9RVP2Vg?e=rGkTCO) contains entity mentions within documents' titles and abstracts only
+- [Entity Mentions in full texts (V30)](https://1drv.ms/u/s!ArDgbq3ak3Zuh5t2-BBUKPwr0evppg?e=xDSJtF) contains all entity mentions within the titles, abstracts and document body texts
+- [Metadata.csv (V30)](https://1drv.ms/u/s!ArDgbq3ak3Zuh5t1HgjSwhILXHTiNA?e=fGrf6b) contains metadata of all files. This file is included in the original CORD19 dump. The SHA column contains the SHAs of the pdf scans which we use as the identifier for the files. These SHAs are also the original file names of the JSON parses.
+
 
 CORD19 - Version 22:
 - [Entity Mentions in titles and abstracts (V22)](https://1drv.ms/u/s!ArDgbq3ak3Zuh5swZCUL9wNeG7G8tw?e=a4cKch) contains entity mentions within documents' titles and abstracts only
