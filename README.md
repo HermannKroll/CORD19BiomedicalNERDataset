@@ -1,7 +1,7 @@
 # A Semantically Enriched Dataset based on Biomedical NER for the COVID19 Open Research Dataset Challenge
 
 
-This repository belongs to our [arXiv publication](https://arxiv.org/abs/2005.08823) and contains the CORD19 entity mentions as *JSON*-dumps. The files are collections of the entity mentions found by [TaggerOne](https://www.ncbi.nlm.nih.gov/research/bionlp/tools/taggerone/) and [GNormPlus](https://www.ncbi.nlm.nih.gov/research/bionlp/Tools/gnormplus/) via our Python pipeline. They are based on the [CORD-19 dataset Version 9](https://www.kaggle.com/dataset/08dd9ead3afd4f61ef246bfd6aee098765a19d9f6dbf514f0142965748be859b/version/9).  The code for our pipeline will be released soon.
+This repository belongs to our [arXiv publication](https://arxiv.org/abs/2005.08823) and contains the CORD19 entity mentions as *JSON*-dumps. The files are collections of the entity mentions found by [TaggerOne](https://www.ncbi.nlm.nih.gov/research/bionlp/tools/taggerone/) and [GNormPlus](https://www.ncbi.nlm.nih.gov/research/bionlp/Tools/gnormplus/) via our Python pipeline. They are based on the [CORD-19 dataset](https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge).  The code for our pipeline will be released soon.
 The data is published for free reuse under the [Creative Commons Attribution 4.0 International license (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
 
 The dumps will be updated continuously. If you use our repository, please cite the following paper:
