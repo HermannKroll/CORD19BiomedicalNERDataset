@@ -18,7 +18,8 @@ The dumps will be updated continuously. If you use our repository, please cite t
  
 
 ## Files
-This repository contains two dumps:
+This repository contains three dumps:
+
 CORD19 - Version 30:
 - [Entity Mentions in titles and abstracts (V30)](https://1drv.ms/u/s!ArDgbq3ak3Zuh5t0gMLGB-B9RVP2Vg?e=rGkTCO) contains entity mentions within documents' titles and abstracts only
 - [Entity Mentions in full texts (V30)](https://1drv.ms/u/s!ArDgbq3ak3Zuh5t2-BBUKPwr0evppg?e=xDSJtF) contains all entity mentions within the titles, abstracts and document body texts
