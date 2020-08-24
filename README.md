@@ -24,6 +24,7 @@ CORD19 - Version 38:
 - [Entity Mentions in titles and abstracts (V38)](https://1drv.ms/u/s!ArDgbq3ak3Zuh50gCtnPRMcgnLLaiw?e=Ld0WdJ) contains entity mentions within documents' titles and abstracts only
 - [Entity Mentions in full texts (V38)](https://1drv.ms/u/s!ArDgbq3ak3Zuh50fRKVNlikDQ2hJKQ?e=Otce0l) contains all entity mentions within the titles, abstracts and document body texts
 - [Metadata.csv (V38)](https://1drv.ms/u/s!ArDgbq3ak3Zuh50c8APxx84f6xtL1g?e=c6u38A) contains metadata of all files. This file is included in the original CORD19 dump. The SHA column contains the SHAs of the pdf scans which we use as the identifier for the files. These SHAs are also the original file names of the JSON parses.
+- [Translation.json (V38)](https://1drv.ms/u/s!ArDgbq3ak3Zuh50eA8Ofx7DPRdArlg?e=GxLqXx) maps the internally used document ids to the cord uid used in the metadata.csv file. See the example below. 
 
 
 CORD19 - Version 30:
@@ -115,7 +116,12 @@ For further clarification, here are some example entries from the full text dump
           "start": 20,
           "end": 36
        },
-       "entity_str": "thrombocytopenia",
+       "entity_str": "thrombocytopenia",The translation file maps the internally used document ids to the cord uid used in the metadata.csv file. It has an entry for each document source:
+
+    If it is a json file in the document parses, the key is the file name.
+    If the source is only the abstract and title colum in metadata.csv, the key is metadata.csv/<cord_uid>.
+    The value consists of the cord uid and the source collections of the document.
+
        "entity_type": "Disease",
        "entity_id": "MESH:D013921"
     },...
@@ -127,3 +133,29 @@ For further clarification, here are some example entries from the full text dump
 The document named `"c4dc1c0360d3fe9ceddc4650aea022f24d88cd99.json"` contains the entity `fever` of type `Disease` with MeSH-ID [D013921](https://meshb.nlm.nih.gov/record/ui?ui=D005334) in the title. The entity mention is located at character positions 77 to 82.
 
 Likewise, there are the entities `surface glycoproteins` at position 821 to 842 in the abstract and `thrombocytopenia` at position 20 to 36 in the first paragraph of the body text.
+
+
+## Translation
+The translation file maps the internally used document ids to the cord uid used in the metadata.csv file. It has an entry for each document source:
+    - If it is a json file in the document parses, the key is the file name.
+    - If the source is only the abstract and title colum in metadata.csv, the key is metadata.csv/<cord_uid>.
+    - The value consists of the cord uid and the source collections of the document.
+
+```
+{
+   "PMC35282.xml.json": { # document id as in <output>_entity_mentions_fulltexts.json. Entry for each document
+      "cord_uid": "ug7v899j", # cord_uid as in metadata.csv
+      "source_collection": [
+         "PMC"  #source collection(s) as in metadata.csv
+      ]
+   },
+   [...]
+   "metadata.csv/ejv2xln0": { # document id for abstract exported from metadata.csv
+      "cord_uid": "ejv2xln0",
+      "source_collection": [
+         "PMC"
+      ]
+   }
+}
+```
+
