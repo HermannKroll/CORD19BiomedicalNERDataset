@@ -20,6 +20,13 @@ The dumps will be updated continuously. If you use our repository, please cite t
 ## Files
 This repository contains three dumps:
 
+CORD19 - Version 44:
+- [Entity Mentions in titles and abstracts (V44)](https://1drv.ms/u/s!ArDgbq3ak3Zuh50raOXVqzrrB0Y1Vg?e=WlF6dp) contains entity mentions within documents' titles and abstracts only
+- [Entity Mentions in full texts (V44)](https://1drv.ms/u/s!ArDgbq3ak3Zuh50t7_o0W5EabWbuOw?e=0JCg0i) contains all entity mentions within the titles, abstracts and document body texts
+- [Metadata.csv (V44)](https://1drv.ms/u/s!ArDgbq3ak3Zuh50qcOqP04yfc0Bq7g?e=aKb9kJ) contains metadata of all files. This file is included in the original CORD19 dump. The SHA column contains the SHAs of the pdf scans which we use as the identifier for the files. These SHAs are also the original file names of the JSON parses.
+- [Translation.json (V44)](https://1drv.ms/u/s!ArDgbq3ak3Zuh50sK_8EoUmj1q5ZMw?e=QCmH90) maps the internally used document ids to the cord uid used in the metadata.csv file. See the example below. 
+
+
 CORD19 - Version 38:
 - [Entity Mentions in titles and abstracts (V38)](https://1drv.ms/u/s!ArDgbq3ak3Zuh50gCtnPRMcgnLLaiw?e=Ld0WdJ) contains entity mentions within documents' titles and abstracts only
 - [Entity Mentions in full texts (V38)](https://1drv.ms/u/s!ArDgbq3ak3Zuh50fRKVNlikDQ2hJKQ?e=Otce0l) contains all entity mentions within the titles, abstracts and document body texts
