@@ -1,7 +1,7 @@
 # A Semantically Enriched Dataset based on Biomedical NER for the COVID19 Open Research Dataset Challenge
 
 
-This repository belongs to our [arXiv publication](https://arxiv.org/abs/2005.08823) and contains the CORD19 entity mentions as *JSON*-dumps. The files are collections of the entity mentions found by [TaggerOne](https://www.ncbi.nlm.nih.gov/research/bionlp/tools/taggerone/) and [GNormPlus](https://www.ncbi.nlm.nih.gov/research/bionlp/Tools/gnormplus/) via our Python pipeline. They are based on the [CORD-19 dataset](https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge).  The code for our pipeline will be released soon.
+This repository belongs to our [arXiv publication](https://arxiv.org/abs/2005.08823) and contains the CORD19 entity mentions as *JSON*-dumps. The files are collections of the entity mentions found by [TaggerOne](https://www.ncbi.nlm.nih.gov/research/bionlp/tools/taggerone/) and [GNormPlus](https://www.ncbi.nlm.nih.gov/research/bionlp/Tools/gnormplus/) via our Python pipeline. They are based on the [CORD-19 dataset](https://www.kaggle.com/allen-institute-for-ai/CORD-19-research-challenge).  The code for our pipeline is released in another repository [KGExtractionToolbox](https://github.com/HermannKroll/KGExtractionToolbox). The repository contains interfaces to TaggerOne and GNormPlus.
 The data is published for free reuse under the [Creative Commons Attribution 4.0 International license (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
 
 The dumps will be updated continuously. If you use our repository, please cite the following paper:
@@ -18,51 +18,24 @@ The dumps will be updated continuously. If you use our repository, please cite t
  
 
 ## Files
-This repository contains three dumps:
-
-CORD19 - Version 70:
-- [Entity Mentions in titles and abstracts (V70)](https://1drv.ms/u/s!ArDgbq3ak3Zuh6AvK7QTVldp_wKy0g?e=V7PVyu) contains entity mentions within documents' titles and abstracts only
-- [Entity Mentions in full texts (V70)](https://1drv.ms/u/s!ArDgbq3ak3Zuh6AymM6bVjWJ9FQEiQ?e=HQvywU) contains all entity mentions within the titles, abstracts and document body texts
-- [Metadata.csv (V70)](https://1drv.ms/u/s!ArDgbq3ak3Zuh6Axs6-JY2koKaIX-g?e=qdnqsz) contains metadata of all files. This file is included in the original CORD19 dump. The SHA column contains the SHAs of the pdf scans which we use as the identifier for the files. These SHAs are also the original file names of the JSON parses.
-- [Translation.json (V70](https://1drv.ms/u/s!ArDgbq3ak3Zuh6AwngkTkicpwIyAOQ?e=oFMGvs) maps the internally used document ids to the cord uid used in the metadata.csv file. See the example below. 
+This corresponding version dumps contain four files:
+- Entity Mentions in titles and abstracts contains entity mentions within documents' titles and abstracts only
+- Entity Mentions in full textscontains all entity mentions within the titles, abstracts and document body texts
+- Metadata.csv contains metadata of all files. This file is included in the original CORD19 dump. The SHA column contains the SHAs of the pdf scans which we use as the identifier for the files. These SHAs are also the original file names of the JSON parses.
+- Translation.json maps the internally used document ids to the cord uid used in the metadata.csv file. See the example below. 
 
 
+## Download Dataset Versions:
 
-CORD19 - Version 54:
-- [Entity Mentions in titles and abstracts (V54)](https://1drv.ms/u/s!ArDgbq3ak3Zuh501X0lAIYZQFmXosQ?e=S2B63Q) contains entity mentions within documents' titles and abstracts only
-- [Entity Mentions in full texts (V54)](https://1drv.ms/u/s!ArDgbq3ak3Zuh503hvVzQKVJUDR7RA?e=aRE02D) contains all entity mentions within the titles, abstracts and document body texts
-- [Metadata.csv (V54)](https://1drv.ms/u/s!ArDgbq3ak3Zuh5023UF6snJqclZlAw?e=opgTFR) contains metadata of all files. This file is included in the original CORD19 dump. The SHA column contains the SHAs of the pdf scans which we use as the identifier for the files. These SHAs are also the original file names of the JSON parses.
-- [Translation.json (V54)](https://1drv.ms/u/s!ArDgbq3ak3Zuh500qgqcTCsvRoouZQ?e=GUW7ke) maps the internally used document ids to the cord uid used in the metadata.csv file. See the example below. 
+- [CORD19 - Version 106](https://1drv.ms/u/s!ArDgbq3ak3Zuh6gC3hs1gC5erKAxRg?e=PckRqM)
+- [CORD19 - Version 70](https://1drv.ms/u/s!ArDgbq3ak3Zuh6ZIupI2ENogwU7DuQ?e=pvHKB5)
+- [CORD19 - Version 54](https://1drv.ms/u/s!ArDgbq3ak3Zuh6Y1XEjFjFxtAfuugQ?e=QuWSoK)
+- [CORD19 - Version 44](https://1drv.ms/u/s!ArDgbq3ak3Zuh6YmFOzyCTQGGiS3hg?e=db4BKX)
+- [CORD19 - Version 38](https://1drv.ms/u/s!ArDgbq3ak3Zuh6V8bzfSqTl3W2Bm6g?e=UaNlxn)
+- [CORD19 - Version 30](https://1drv.ms/u/s!ArDgbq3ak3Zuh6V3srGGQnvZo2dysQ?e=CVb8QQ)
+- [CORD19 - Version 22](https://1drv.ms/u/s!ArDgbq3ak3Zuh6VacVr2aLUYERh6SQ?e=MSCJCH)
+- [CORD19 - Version 9](https://1drv.ms/u/s!ArDgbq3ak3Zuh6VZYYXRh-cWWYDyEQ?e=FK2Jrz)
 
-CORD19 - Version 44:
-- [Entity Mentions in titles and abstracts (V44)](https://1drv.ms/u/s!ArDgbq3ak3Zuh50raOXVqzrrB0Y1Vg?e=WlF6dp) contains entity mentions within documents' titles and abstracts only
-- [Entity Mentions in full texts (V44)](https://1drv.ms/u/s!ArDgbq3ak3Zuh50t7_o0W5EabWbuOw?e=0JCg0i) contains all entity mentions within the titles, abstracts and document body texts
-- [Metadata.csv (V44)](https://1drv.ms/u/s!ArDgbq3ak3Zuh50qcOqP04yfc0Bq7g?e=aKb9kJ) contains metadata of all files. This file is included in the original CORD19 dump. The SHA column contains the SHAs of the pdf scans which we use as the identifier for the files. These SHAs are also the original file names of the JSON parses.
-- [Translation.json (V44)](https://1drv.ms/u/s!ArDgbq3ak3Zuh50sK_8EoUmj1q5ZMw?e=QCmH90) maps the internally used document ids to the cord uid used in the metadata.csv file. See the example below. 
-
-
-CORD19 - Version 38:
-- [Entity Mentions in titles and abstracts (V38)](https://1drv.ms/u/s!ArDgbq3ak3Zuh50gCtnPRMcgnLLaiw?e=Ld0WdJ) contains entity mentions within documents' titles and abstracts only
-- [Entity Mentions in full texts (V38)](https://1drv.ms/u/s!ArDgbq3ak3Zuh50fRKVNlikDQ2hJKQ?e=Otce0l) contains all entity mentions within the titles, abstracts and document body texts
-- [Metadata.csv (V38)](https://1drv.ms/u/s!ArDgbq3ak3Zuh50c8APxx84f6xtL1g?e=c6u38A) contains metadata of all files. This file is included in the original CORD19 dump. The SHA column contains the SHAs of the pdf scans which we use as the identifier for the files. These SHAs are also the original file names of the JSON parses.
-- [Translation.json (V38)](https://1drv.ms/u/s!ArDgbq3ak3Zuh50eA8Ofx7DPRdArlg?e=GxLqXx) maps the internally used document ids to the cord uid used in the metadata.csv file. See the example below. 
-
-
-CORD19 - Version 30:
-- [Entity Mentions in titles and abstracts (V30)](https://1drv.ms/u/s!ArDgbq3ak3Zuh5t0gMLGB-B9RVP2Vg?e=rGkTCO) contains entity mentions within documents' titles and abstracts only
-- [Entity Mentions in full texts (V30)](https://1drv.ms/u/s!ArDgbq3ak3Zuh5t2-BBUKPwr0evppg?e=xDSJtF) contains all entity mentions within the titles, abstracts and document body texts
-- [Metadata.csv (V30)](https://1drv.ms/u/s!ArDgbq3ak3Zuh5t1HgjSwhILXHTiNA?e=fGrf6b) contains metadata of all files. This file is included in the original CORD19 dump. The SHA column contains the SHAs of the pdf scans which we use as the identifier for the files. These SHAs are also the original file names of the JSON parses.
-
-
-CORD19 - Version 22:
-- [Entity Mentions in titles and abstracts (V22)](https://1drv.ms/u/s!ArDgbq3ak3Zuh5swZCUL9wNeG7G8tw?e=a4cKch) contains entity mentions within documents' titles and abstracts only
-- [Entity Mentions in full texts (V22)](https://1drv.ms/u/s!ArDgbq3ak3Zuh5syeLZamNRzORn6JA?e=LODHmi) contains all entity mentions within the titles, abstracts and document body texts
-- [Metadata.csv (V22)](https://1drv.ms/u/s!ArDgbq3ak3Zuh5sx0LqCE9lqX7rtfg?e=RjdKWN) contains metadata of all files. This file is included in the original CORD19 dump. The SHA column contains the SHAs of the pdf scans which we use as the identifier for the files. These SHAs are also the original file names of the JSON parses.
-
-CORD19 - Version 9:
-- [Entity Mentions in titles and abstracts (V9)](https://1drv.ms/u/s!ArDgbq3ak3Zuh5oeo_b_Qo50j9QmeA?e=qclJQ4) contains entity mentions within documents' titles and abstracts only
-- [Entity Mentions in full texts (V9)](https://1drv.ms/u/s!ArDgbq3ak3Zuh5ofm6bOXIOvEcqu6w?e=BggneA) contains all entity mentions within the titles, abstracts and document body texts
-- [Metadata.csv (V9)](https://1drv.ms/u/s!ArDgbq3ak3Zuh5ogtS6q2sUITSRHpA?e=fuoIIz) contains metadata of all files. This file is included in the original CORD19 dump. The SHA column contains the SHAs of the pdf scans which we use as the identifier for the files. These SHAs are also the original file names of the JSON parses.
 
 ## Dump format
 Both *JSON*-Dumps follow this format: 
